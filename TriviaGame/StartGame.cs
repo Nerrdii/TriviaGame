@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TriviaGame
 {
-    public partial class Form1 : Form
+    public partial class StartGame : Form
     {
-        public Form1()
+        public StartGame()
         {
             InitializeComponent();
         }
