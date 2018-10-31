@@ -28,13 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.hscoreTBackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // hscoreTBackButton
+            // 
+            this.hscoreTBackButton.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hscoreTBackButton.Image = global::TriviaGame.Properties.Resources.backB;
+            this.hscoreTBackButton.Location = new System.Drawing.Point(120, 350);
+            this.hscoreTBackButton.Name = "hscoreTBackButton";
+            this.hscoreTBackButton.Size = new System.Drawing.Size(87, 44);
+            this.hscoreTBackButton.TabIndex = 4;
+            this.hscoreTBackButton.UseVisualStyleBackColor = true;
+            this.hscoreTBackButton.Click += new System.EventHandler(this.howTBackButton_Click);
             // 
             // HighScores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 438);
+            this.ClientSize = new System.Drawing.Size(338, 436);
+            this.Controls.Add(this.hscoreTBackButton);
             this.Name = "HighScores";
             this.Text = "HighScores";
             this.ResumeLayout(false);
@@ -42,5 +55,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button hscoreTBackButton;
     }
 }

@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace TriviaGame
 {
-    public partial class GameOptions : Form
+    public partial class HowTo : Form
     {
-        public GameOptions()
+        public HowTo()
         {
             InitializeComponent();
         }
 
-        private void optBackButton_Click(object sender, EventArgs e)
+        private void noButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void howTBackButton_Click(object sender, EventArgs e)
         {
             //this.Hide();
             Main backMain = new Main();

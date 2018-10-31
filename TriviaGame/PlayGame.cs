@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace TriviaGame
 {
-    public partial class StartGame : Form
+    public partial class PlayGame : Form
     {
-        public StartGame()
+        public PlayGame()
         {
             InitializeComponent();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            Main backMain = new Main();
+            backMain.Show();
+            this.Close();
         }
     }
 }

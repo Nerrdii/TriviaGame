@@ -25,7 +25,7 @@ namespace TriviaGame
         private void startButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            StartGame sG = new StartGame();           
+            PlayGame sG = new PlayGame();           
             sG.Show();
 
         }
@@ -33,7 +33,7 @@ namespace TriviaGame
         private void howToButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Instructions howTo = new Instructions();
+            HowTo howTo = new HowTo();
             howTo.Show();
         }
 

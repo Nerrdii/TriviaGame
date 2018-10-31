@@ -16,5 +16,13 @@ namespace TriviaGame
         {
             InitializeComponent();
         }
+
+        private void howTBackButton_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            Main backMain = new Main();
+            backMain.Show();
+            this.Close();
+        }
     }
 }
