@@ -15,6 +15,8 @@ namespace TriviaGame
         public HowTo()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
         }
 
         private void noButton_Click(object sender, EventArgs e)
@@ -24,10 +26,10 @@ namespace TriviaGame
 
         private void howTBackButton_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             Main backMain = new Main();
-            backMain.Show();
-            this.Close();
+            backMain.MdiParent = this.MdiParent;
+            backMain.Show();            
         }
     }
 }

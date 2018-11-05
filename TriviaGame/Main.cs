@@ -15,6 +15,8 @@ namespace TriviaGame
         public Main()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -25,7 +27,8 @@ namespace TriviaGame
         private void startButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PlayGame sG = new PlayGame();           
+            PlayGame sG = new PlayGame();
+            sG.MdiParent = this.MdiParent;                
             sG.Show();
 
         }
@@ -34,6 +37,7 @@ namespace TriviaGame
         {
             this.Hide();
             HowTo howTo = new HowTo();
+            howTo.MdiParent = this.MdiParent;
             howTo.Show();
         }
 
@@ -41,6 +45,7 @@ namespace TriviaGame
         {
             this.Hide();
             HighScores hScores = new HighScores();
+            hScores.MdiParent = this.MdiParent;
             hScores.Show();
         }
 
@@ -48,6 +53,7 @@ namespace TriviaGame
         {
             this.Hide();
             GameOptions gOpt = new GameOptions();
+            gOpt.MdiParent = this.MdiParent;
             gOpt.Show();
         }
     }

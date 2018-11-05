@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TriviaGame")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Trivia game that pulls questions and answers from a database. Created by Group 2_C# - Joseph Davis, Gift Obiajulu Ozonuwe, Paul Wiltz")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Group2_C#")]
 [assembly: AssemblyProduct("TriviaGame")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]

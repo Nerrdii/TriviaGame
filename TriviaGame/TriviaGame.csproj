@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -47,6 +47,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutGroupTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutGroupTwo.Designer.cs">
+      <DependentUpon>AboutGroupTwo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameOptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +95,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainContainer.Designer.cs">
+      <DependentUpon>MainContainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutGroupTwo.resx">
+      <DependentUpon>AboutGroupTwo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameOptions.resx">
       <DependentUpon>GameOptions.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContainer.resx">
+      <DependentUpon>MainContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayGame.resx">
       <DependentUpon>PlayGame.cs</DependentUpon>

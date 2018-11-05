@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriviaGame", "TriviaGame\TriviaGame.csproj", "{433CED1A-2849-4615-A7AF-4917343D751A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessClassLibrary", "DataAccessClassLibrary\DataAccessClassLibrary.csproj", "{736DE90C-95B3-4EC3-A812-3E216B122E17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{433CED1A-2849-4615-A7AF-4917343D751A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{433CED1A-2849-4615-A7AF-4917343D751A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{433CED1A-2849-4615-A7AF-4917343D751A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{736DE90C-95B3-4EC3-A812-3E216B122E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{736DE90C-95B3-4EC3-A812-3E216B122E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{736DE90C-95B3-4EC3-A812-3E216B122E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{736DE90C-95B3-4EC3-A812-3E216B122E17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

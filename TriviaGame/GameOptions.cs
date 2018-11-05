@@ -15,14 +15,17 @@ namespace TriviaGame
         public GameOptions()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
         }
 
         private void optBackButton_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             Main backMain = new Main();
+            backMain.MdiParent = this.MdiParent;
             backMain.Show();
-            this.Close();
+            //this.Close();
         }
     }
 }

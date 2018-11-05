@@ -170,6 +170,7 @@
             this.Controls.Add(this.easyButton);
             this.Name = "PlayGame";
             this.Text = "Play Game";
+            this.Load += new System.EventHandler(this.PlayGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
