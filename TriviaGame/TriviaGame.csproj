@@ -107,6 +107,12 @@
     <Compile Include="PlayGame.Designer.cs">
       <DependentUpon>PlayGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlayNow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayNow.Designer.cs">
+      <DependentUpon>PlayNow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutGroupTwo.resx">
@@ -130,6 +136,9 @@
     <EmbeddedResource Include="PlayGame.resx">
       <DependentUpon>PlayGame.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlayNow.resx">
+      <DependentUpon>PlayNow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -138,6 +147,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,11 +163,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Exitgame.png" />
-    <Content Include="Assets\GameOptions.png" />
-    <Content Include="Assets\HighScores.png" />
-    <Content Include="Assets\HowTo.png" />
-    <Content Include="Assets\Startgame.png" />
+    <None Include="Assets\clearB.png" />
+    <None Include="Assets\saveB.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -170,6 +177,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\playgameB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\highscoresB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\quitB.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

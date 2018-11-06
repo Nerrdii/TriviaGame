@@ -33,5 +33,15 @@ namespace TriviaGame
         {
 
         }
+
+        private void playNowButton_Click(object sender, EventArgs e)
+        {
+            //instantiate playnow button
+            this.Hide();
+            PlayNow myPlayNow = new PlayNow();
+            myPlayNow.MdiParent = this.MdiParent;
+            myPlayNow.Show();
+
+        }
     }
 }

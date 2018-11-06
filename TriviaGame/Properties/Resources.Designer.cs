@@ -73,9 +73,29 @@ namespace TriviaGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clearB {
+            get {
+                object obj = ResourceManager.GetObject("clearB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exitB {
             get {
                 object obj = ResourceManager.GetObject("exitB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap highscoresB {
+            get {
+                object obj = ResourceManager.GetObject("highscoresB", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +126,36 @@ namespace TriviaGame.Properties {
         internal static System.Drawing.Bitmap playB {
             get {
                 object obj = ResourceManager.GetObject("playB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap playgameB {
+            get {
+                object obj = ResourceManager.GetObject("playgameB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quitB {
+            get {
+                object obj = ResourceManager.GetObject("quitB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saveB {
+            get {
+                object obj = ResourceManager.GetObject("saveB", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
