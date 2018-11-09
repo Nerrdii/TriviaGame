@@ -27,5 +27,11 @@ namespace TriviaGame
             backMain.Show();
             //this.Close();
         }
+
+        private void HighScores_Load(object sender, EventArgs e)
+        {
+            TriviaDbIntermediary inst = new TriviaDbIntermediary();
+            scoreDataGridView.DataSource = inst.Leaderboard();
+        }
     }
 }

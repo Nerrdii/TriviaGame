@@ -31,6 +31,8 @@
             this.hscoreTBackButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.scoreDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // hscoreTBackButton
@@ -64,16 +66,28 @@
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // scoreDataGridView
+            // 
+            this.scoreDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.scoreDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.scoreDataGridView.Location = new System.Drawing.Point(32, 63);
+            this.scoreDataGridView.Name = "scoreDataGridView";
+            this.scoreDataGridView.Size = new System.Drawing.Size(275, 262);
+            this.scoreDataGridView.TabIndex = 7;
+            // 
             // HighScores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 436);
+            this.Controls.Add(this.scoreDataGridView);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.hscoreTBackButton);
             this.Name = "HighScores";
             this.Text = "HighScores";
+            this.Load += new System.EventHandler(this.HighScores_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.scoreDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,5 +98,6 @@
         private System.Windows.Forms.Button hscoreTBackButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView scoreDataGridView;
     }
 }
