@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccessClassLibrary.Models;
 
@@ -61,18 +56,20 @@ namespace TriviaGame
                 return;
             }
 
-            MultipleChoiceQuestion question = new MultipleChoiceQuestion();
-            question.Question = questionTextBox.Text;
-            question.CorrectAnswer = correctAnsTextBox.Text;
-            question.SecondAnswer = SecAnsTextBox.Text;
-            question.ThirdAnswer = thirdAnsTextBox.Text;
-            question.FourthAnswer = fourthAnsTextBox.Text;
-            question.Category = category.Text;
-            question.Difficulty = difficulty.Text;
+            MultipleChoiceQuestion question = new MultipleChoiceQuestion
+            {
+                Question = questionTextBox.Text,
+                CorrectAnswer = correctAnsTextBox.Text,
+                SecondAnswer = SecAnsTextBox.Text,
+                ThirdAnswer = thirdAnsTextBox.Text,
+                FourthAnswer = fourthAnsTextBox.Text,
+                Category = category.Text,
+                Difficulty = difficulty.Text
+            };
 
-            DataAccessClassLibrary.TriviaDbAccess dataAccessClass = new DataAccessClassLibrary.TriviaDbAccess();
+            TriviaDbIntermediary triviaDbIntermediary = new TriviaDbIntermediary();
 
-            dataAccessClass.AddQuestionAndAnswers(question);
+            triviaDbIntermediary.AddQuestionWithAnswers(question);
 
             MessageBox.Show("Question successfully added!", "Success", MessageBoxButtons.OK);
 
