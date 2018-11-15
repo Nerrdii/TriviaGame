@@ -132,6 +132,7 @@
             this.Controls.Add(this.label3);
             this.Name = "PlayNow";
             this.Text = "PlayNow";
+            this.Load += new System.EventHandler(this.PlayNow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

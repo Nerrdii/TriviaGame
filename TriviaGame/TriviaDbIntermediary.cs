@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Data;
 using System.Data.SqlClient;
 using DataAccessClassLibrary;
@@ -10,7 +11,7 @@ namespace TriviaGame
 {
     class TriviaDbIntermediary
     {
-        private TriviaDbAccess triviaDbAccess;
+        private TriviaDbAccess triviaDbAccess = new TriviaDbAccess();
 
         public string DBError { get; set; }
 
@@ -34,8 +35,6 @@ namespace TriviaGame
         {
             try
             {
-                triviaDbAccess = new TriviaDbAccess();
-
                 int correctAnswerId = AddAnswer(question.CorrectAnswer);
                 AddAnswer(question.SecondAnswer);
                 AddAnswer(question.ThirdAnswer);
@@ -100,6 +99,49 @@ namespace TriviaGame
             };
 
             triviaDbAccess.ExecuteScalarQuery(sqlQuery, parameters);
+        }
+
+        public IEnumerable<MultipleChoiceQuestion> GetQuestions(string category)
+        {
+            string sqlQuery = "SELECT ID, QuestionText, Difficulty FROM Question WHERE CategoryID = @CategoryID";
+
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                new SqlParameter("CategoryID", GetCategoryID(category))
+            };
+
+            DataSet questionDataSet = triviaDbAccess.GenericQuery(sqlQuery, parameters);
+
+            List<MultipleChoiceQuestion> questions = questionDataSet.Tables[0].AsEnumerable().Select(dataRow => new MultipleChoiceQuestion
+            {
+                QuestionID = dataRow.Field<int>("ID"),
+                Question = dataRow.Field<string>("QuestionText"),
+                Difficulty = dataRow.Field<string>("Difficulty"),
+                Category = category
+            }).ToList();
+
+            questions.ForEach(q =>
+            {
+                DataSet answerDataSet = GetWrongAnswersByQuestionID(q.QuestionID);
+            });
+
+            return questions;
+        }
+
+        private DataSet GetWrongAnswersByQuestionID(int questionId)
+        {
+            string sqlQuery = "SELECT O.OptionText FROM [Option] O" +
+                "JOIN Question_Option QO ON O.ID = QO.OptionID" +
+                "JOIN Question Q ON QO.QuestionID = Q.ID" +
+                "WHERE Q.ID = @QuestionID" +
+                "AND O.ID <> Q.Answer";
+
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                new SqlParameter("QuestionID", questionId)
+            };
+
+            return triviaDbAccess.GenericQuery(sqlQuery, parameters);
         }
     }
 }

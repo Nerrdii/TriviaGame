@@ -46,7 +46,27 @@ namespace DataAccessClassLibrary
             }
             finally
             {
-                this.CloseDBConnection();
+                CloseDBConnection();
+            }
+        }
+
+        public DataSet GenericQuery(string sqlQuery, List<SqlParameter> parameters)
+        {
+            DataSet triviaDataSet = new DataSet();
+
+            try
+            {
+                SqlDataAdapter trivAdapter = new SqlDataAdapter(sqlQuery, GetDBConnection());
+
+                parameters.ForEach(param => trivAdapter.SelectCommand.Parameters.AddWithValue(param.ParameterName, param.Value));
+
+                OpenDBConnection();
+                trivAdapter.Fill(triviaDataSet);
+                return triviaDataSet;
+            }
+            finally
+            {
+                CloseDBConnection();
             }
         }
 

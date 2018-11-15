@@ -15,18 +15,20 @@ namespace TriviaGame
         public PlayGame()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(0, 0);
+            StartPosition = FormStartPosition.Manual;
+            Location = new Point(0, 0);
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            //instantiate back button
-            this.Hide();
-            Main backMain = new Main(); 
-            backMain.MdiParent = this.MdiParent;
+            Hide();
+
+            Main backMain = new Main
+            {
+                MdiParent = MdiParent
+            };
+
             backMain.Show();
-            
         }
 
         private void PlayGame_Load(object sender, EventArgs e)
@@ -36,12 +38,22 @@ namespace TriviaGame
 
         private void playNowButton_Click(object sender, EventArgs e)
         {
-            //instantiate playnow button
-            this.Hide();
-            PlayNow myPlayNow = new PlayNow();
-            myPlayNow.MdiParent = this.MdiParent;
-            myPlayNow.Show();
+            var category = categoryGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 
+            if (category == null)
+            {
+                MessageBox.Show("Category must be chosen", "Error", MessageBoxButtons.OK);
+                return;
+            }
+
+            Hide();
+
+            PlayNow myPlayNow = new PlayNow(category.Text)
+            {
+                MdiParent = MdiParent
+            };
+
+            myPlayNow.Show();
         }
     }
 }
