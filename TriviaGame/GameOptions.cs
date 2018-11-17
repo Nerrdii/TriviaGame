@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using DataAccessClassLibrary.Models;
@@ -59,13 +60,14 @@ namespace TriviaGame
             MultipleChoiceQuestion question = new MultipleChoiceQuestion
             {
                 Question = questionTextBox.Text,
-                CorrectAnswer = correctAnsTextBox.Text,
-                SecondAnswer = SecAnsTextBox.Text,
-                ThirdAnswer = thirdAnsTextBox.Text,
-                FourthAnswer = fourthAnsTextBox.Text,
                 Category = category.Text,
-                Difficulty = difficulty.Text
+                Difficulty = difficulty.Text,
+                Answers = new List<Answer>()
             };
+            question.Answers.Add(new Answer(correctAnsTextBox.Text, true));
+            question.Answers.Add(new Answer(SecAnsTextBox.Text));
+            question.Answers.Add(new Answer(thirdAnsTextBox.Text));
+            question.Answers.Add(new Answer(fourthAnsTextBox.Text));
 
             TriviaDbIntermediary triviaDbIntermediary = new TriviaDbIntermediary();
 

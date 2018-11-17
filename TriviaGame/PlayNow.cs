@@ -40,10 +40,18 @@ namespace TriviaGame
         {
             try
             {
-                BindingSource bindingSourceQuestions = new BindingSource();
-                bindingSourceQuestions.DataSource = triviaDbIntermediary.GetQuestions(Category);
+                BindingSource questionsBindingSource = new BindingSource
+                {
+                    DataSource = triviaDbIntermediary.GetQuestions(Category)
+                };
 
-                questDisplayLabel.DataBindings.Add("Text", bindingSourceQuestions, "Question");
+                //((List<MultipleChoiceQuestion>)questionsBindingSource.DataSource).ForEach(q => q.Answers)
+
+                questDisplayLabel.DataBindings.Add("Text", questionsBindingSource, "Question");
+                answerButton1.DataBindings.Add("Text", ((MultipleChoiceQuestion) questionsBindingSource.Current).Answers[0], "Text");
+                answerButton2.DataBindings.Add("Text", ((MultipleChoiceQuestion) questionsBindingSource.Current).Answers[1], "Text");
+                answerButton3.DataBindings.Add("Text", ((MultipleChoiceQuestion) questionsBindingSource.Current).Answers[2], "Text");
+                answerButton4.DataBindings.Add("Text", ((MultipleChoiceQuestion) questionsBindingSource.Current).Answers[3], "Text");
             }
             catch (Exception ex)
             {

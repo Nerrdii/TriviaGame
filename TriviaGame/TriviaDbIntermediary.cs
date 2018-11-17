@@ -35,10 +35,17 @@ namespace TriviaGame
         {
             try
             {
-                int correctAnswerId = AddAnswer(question.CorrectAnswer);
-                AddAnswer(question.SecondAnswer);
-                AddAnswer(question.ThirdAnswer);
-                AddAnswer(question.FourthAnswer);
+                int correctAnswerId = 0;
+
+                question.Answers.ForEach(a =>
+                {
+                    int id = AddAnswer(a.Text);
+
+                    if (a.IsCorrect)
+                    {
+                        correctAnswerId = id;
+                    }
+                });
 
                 int questionId = AddQuestion(question.Question, question.Category, question.Difficulty);
 
@@ -103,7 +110,10 @@ namespace TriviaGame
 
         public IEnumerable<MultipleChoiceQuestion> GetQuestions(string category)
         {
-            string sqlQuery = "SELECT ID, QuestionText, Difficulty FROM Question WHERE CategoryID = @CategoryID";
+            string sqlQuery = "SELECT Q.ID, Q.QuestionText, O.OptionText, Q.Difficulty, Q.Answer " +
+                "FROM [Option] O " +
+                "JOIN Question Q ON Q.Answer = O.ID " +
+                "WHERE Q.CategoryID = @CategoryID";
 
             List<SqlParameter> parameters = new List<SqlParameter>
             {
@@ -117,12 +127,24 @@ namespace TriviaGame
                 QuestionID = dataRow.Field<int>("ID"),
                 Question = dataRow.Field<string>("QuestionText"),
                 Difficulty = dataRow.Field<string>("Difficulty"),
+                Answers = new List<Answer>()
+                {
+                    new Answer(dataRow.Field<string>("OptionText"), true)
+                },
                 Category = category
             }).ToList();
+
+            Random rnd = new Random();
 
             questions.ForEach(q =>
             {
                 DataSet answerDataSet = GetWrongAnswersByQuestionID(q.QuestionID);
+
+                List<string> answers = answerDataSet.Tables[0].AsEnumerable().Select(dataRow => dataRow.Field<string>("OptionText")).ToList();
+
+                answers.ForEach(a => q.Answers.Add(new Answer(a)));
+
+                q.Answers = q.Answers.OrderBy(a => Guid.NewGuid()).ToList();
             });
 
             return questions;
@@ -130,10 +152,10 @@ namespace TriviaGame
 
         private DataSet GetWrongAnswersByQuestionID(int questionId)
         {
-            string sqlQuery = "SELECT O.OptionText FROM [Option] O" +
-                "JOIN Question_Option QO ON O.ID = QO.OptionID" +
-                "JOIN Question Q ON QO.QuestionID = Q.ID" +
-                "WHERE Q.ID = @QuestionID" +
+            string sqlQuery = "SELECT O.OptionText FROM [Option] O " +
+                "JOIN Question_Option QO ON O.ID = QO.OptionID " +
+                "JOIN Question Q ON QO.QuestionID = Q.ID " +
+                "WHERE Q.ID = @QuestionID " +
                 "AND O.ID <> Q.Answer";
 
             List<SqlParameter> parameters = new List<SqlParameter>

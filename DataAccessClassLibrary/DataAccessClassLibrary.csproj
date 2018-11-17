@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ISetupTrivia.cs" />
+    <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\MultipleChoiceQuestion.cs" />
     <Compile Include="TriviaDbAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
