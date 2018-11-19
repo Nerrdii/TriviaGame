@@ -30,12 +30,14 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.questDisplayLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.answerButton1 = new System.Windows.Forms.RadioButton();
             this.answerButton2 = new System.Windows.Forms.RadioButton();
             this.answerButton3 = new System.Windows.Forms.RadioButton();
             this.answerButton4 = new System.Windows.Forms.RadioButton();
             this.backButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.answersGroupBox = new System.Windows.Forms.GroupBox();
+            this.answersGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -56,20 +58,10 @@
             this.questDisplayLabel.Size = new System.Drawing.Size(313, 56);
             this.questDisplayLabel.TabIndex = 13;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Select One";
-            // 
             // answerButton1
             // 
             this.answerButton1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.answerButton1.Location = new System.Drawing.Point(21, 183);
+            this.answerButton1.Location = new System.Drawing.Point(6, 27);
             this.answerButton1.Name = "answerButton1";
             this.answerButton1.Size = new System.Drawing.Size(133, 47);
             this.answerButton1.TabIndex = 15;
@@ -79,7 +71,7 @@
             // answerButton2
             // 
             this.answerButton2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.answerButton2.Location = new System.Drawing.Point(183, 183);
+            this.answerButton2.Location = new System.Drawing.Point(171, 27);
             this.answerButton2.Name = "answerButton2";
             this.answerButton2.Size = new System.Drawing.Size(133, 47);
             this.answerButton2.TabIndex = 16;
@@ -89,7 +81,7 @@
             // answerButton3
             // 
             this.answerButton3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.answerButton3.Location = new System.Drawing.Point(21, 240);
+            this.answerButton3.Location = new System.Drawing.Point(6, 89);
             this.answerButton3.Name = "answerButton3";
             this.answerButton3.Size = new System.Drawing.Size(133, 47);
             this.answerButton3.TabIndex = 17;
@@ -99,7 +91,7 @@
             // answerButton4
             // 
             this.answerButton4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.answerButton4.Location = new System.Drawing.Point(183, 240);
+            this.answerButton4.Location = new System.Drawing.Point(171, 89);
             this.answerButton4.Name = "answerButton4";
             this.answerButton4.Size = new System.Drawing.Size(133, 47);
             this.answerButton4.TabIndex = 18;
@@ -117,22 +109,43 @@
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // nextButton
+            // 
+            this.nextButton.Location = new System.Drawing.Point(251, 343);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(75, 23);
+            this.nextButton.TabIndex = 20;
+            this.nextButton.Text = "Next";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // answersGroupBox
+            // 
+            this.answersGroupBox.Controls.Add(this.answerButton1);
+            this.answersGroupBox.Controls.Add(this.answerButton2);
+            this.answersGroupBox.Controls.Add(this.answerButton3);
+            this.answersGroupBox.Controls.Add(this.answerButton4);
+            this.answersGroupBox.Location = new System.Drawing.Point(13, 158);
+            this.answersGroupBox.Name = "answersGroupBox";
+            this.answersGroupBox.Size = new System.Drawing.Size(314, 142);
+            this.answersGroupBox.TabIndex = 21;
+            this.answersGroupBox.TabStop = false;
+            this.answersGroupBox.Text = "Select One";
+            // 
             // PlayNow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 436);
+            this.Controls.Add(this.answersGroupBox);
+            this.Controls.Add(this.nextButton);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.answerButton4);
-            this.Controls.Add(this.answerButton3);
-            this.Controls.Add(this.answerButton2);
-            this.Controls.Add(this.answerButton1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.questDisplayLabel);
             this.Controls.Add(this.label3);
             this.Name = "PlayNow";
             this.Text = "PlayNow";
             this.Load += new System.EventHandler(this.PlayNow_Load);
+            this.answersGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,11 +155,12 @@
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label questDisplayLabel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton answerButton1;
         private System.Windows.Forms.RadioButton answerButton2;
         private System.Windows.Forms.RadioButton answerButton3;
         private System.Windows.Forms.RadioButton answerButton4;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.GroupBox answersGroupBox;
     }
 }
