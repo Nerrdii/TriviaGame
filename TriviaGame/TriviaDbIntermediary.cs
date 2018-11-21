@@ -31,6 +31,26 @@ namespace TriviaGame
             }
         }
 
+        public void AddScore(string name, int score)
+        {
+            try
+            {
+                string sqlQuery = "INSERT INTO Score (Name, Score) VALUES (@Name, @Score)";
+
+                List<SqlParameter> parameters = new List<SqlParameter>()
+                {
+                    new SqlParameter("Name", name),
+                    new SqlParameter("Score", score)
+                };
+
+                triviaDbAccess.ExecuteScalarQuery(sqlQuery, parameters);
+            }
+            catch (Exception ex)
+            {
+                DBError = ex.Message;
+            }
+        }
+
         public void AddQuestionWithAnswers(MultipleChoiceQuestion question)
         {
             try
