@@ -55,26 +55,36 @@ namespace TriviaGame
         {
             try
             {
-                int correctAnswerId = 0;
+                int questionId = AddQuestion(question.Question, question.Category, question.Difficulty);
 
                 question.Answers.ForEach(a =>
                 {
                     int id = AddAnswer(a.Text);
+                    InsertIntoQuestionOption(questionId, id);
 
                     if (a.IsCorrect)
                     {
-                        correctAnswerId = id;
+                        UpdateQuestionWithAnswer(id, questionId);
                     }
                 });
-
-                int questionId = AddQuestion(question.Question, question.Category, question.Difficulty);
-
-                UpdateQuestionWithAnswer(correctAnswerId, questionId);
             }
             catch (Exception ex)
             {
                 DBError = ex.Message;
             }
+        }
+
+        private void InsertIntoQuestionOption(int questionId, int answerId)
+        {
+            string sqlQuery = "INSERT INTO Question_Option (QuestionID, OptionID) VALUES (@QuestionID, @OptionID)";
+
+            List<SqlParameter> parameters = new List<SqlParameter>()
+            {
+                new SqlParameter("QuestionID", questionId),
+                new SqlParameter("OptionID", answerId)
+            };
+
+            triviaDbAccess.ExecuteNonQuery(sqlQuery, parameters);
         }
 
         private int GetCategoryID(string categoryName)
@@ -125,7 +135,7 @@ namespace TriviaGame
                 new SqlParameter("QuestionID", questionId)
             };
 
-            triviaDbAccess.ExecuteScalarQuery(sqlQuery, parameters);
+            triviaDbAccess.ExecuteNonQuery(sqlQuery, parameters);
         }
 
         public IEnumerable<MultipleChoiceQuestion> GetQuestions(string category)

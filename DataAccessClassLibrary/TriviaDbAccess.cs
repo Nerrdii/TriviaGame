@@ -83,5 +83,17 @@ namespace DataAccessClassLibrary
 
             return returnValue;
         }
+
+        public void ExecuteNonQuery(string sqlQuery, List<SqlParameter> parameters)
+        {
+            SqlCommand command = new SqlCommand(sqlQuery, GetDBConnection());
+            parameters.ForEach(param => command.Parameters.AddWithValue(param.ParameterName, param.Value));
+
+            OpenDBConnection();
+
+            command.ExecuteNonQuery();
+
+            CloseDBConnection();
+        }
     }
 }
