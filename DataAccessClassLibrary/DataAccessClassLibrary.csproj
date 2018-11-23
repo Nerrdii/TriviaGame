@@ -56,10 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISetupTrivia.cs" />
     <Compile Include="Models\Answer.cs" />
-    <Compile Include="Models\MultipleChoiceQuestion.cs" />
-    <Compile Include="TriviaDbAccess.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="DBAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

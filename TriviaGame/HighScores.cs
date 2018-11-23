@@ -30,8 +30,8 @@ namespace TriviaGame
 
         private void HighScores_Load(object sender, EventArgs e)
         {
-            TriviaDbIntermediary inst = new TriviaDbIntermediary();
-            scoreDataGridView.DataSource = inst.Leaderboard();
+            DBIntermediary dbIntermediary = new DBIntermediary();
+            scoreDataGridView.DataSource = dbIntermediary.Leaderboard();
         }
     }
 }

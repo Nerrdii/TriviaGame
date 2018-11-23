@@ -57,9 +57,9 @@ namespace TriviaGame
                 return;
             }
 
-            MultipleChoiceQuestion question = new MultipleChoiceQuestion
+            Question question = new Question
             {
-                Question = questionTextBox.Text,
+                Text = questionTextBox.Text,
                 Category = category.Text,
                 Difficulty = difficulty.Text,
                 Answers = new List<Answer>()
@@ -69,7 +69,7 @@ namespace TriviaGame
             question.Answers.Add(new Answer(thirdAnsTextBox.Text));
             question.Answers.Add(new Answer(fourthAnsTextBox.Text));
 
-            TriviaDbIntermediary triviaDbIntermediary = new TriviaDbIntermediary();
+            DBIntermediary triviaDbIntermediary = new DBIntermediary();
 
             triviaDbIntermediary.AddQuestionWithAnswers(question);
 

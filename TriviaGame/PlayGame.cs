@@ -46,9 +46,15 @@ namespace TriviaGame
                 return;
             }
 
+            if (namesTextBox.Text == "")
+            {
+                MessageBox.Show("You must enter a name", "Error", MessageBoxButtons.OK);
+                return;
+            }
+
             Hide();
 
-            PlayNow myPlayNow = new PlayNow(category.Text)
+            PlayNow myPlayNow = new PlayNow(category.Text, namesTextBox.Text)
             {
                 MdiParent = MdiParent
             };
