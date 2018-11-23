@@ -34,9 +34,9 @@
             this.answerButton2 = new System.Windows.Forms.RadioButton();
             this.answerButton3 = new System.Windows.Forms.RadioButton();
             this.answerButton4 = new System.Windows.Forms.RadioButton();
-            this.backButton = new System.Windows.Forms.Button();
-            this.nextButton = new System.Windows.Forms.Button();
             this.answersGroupBox = new System.Windows.Forms.GroupBox();
+            this.quitbutton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
             this.answersGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,71 +53,60 @@
             // questDisplayLabel
             // 
             this.questDisplayLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.questDisplayLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questDisplayLabel.Location = new System.Drawing.Point(13, 68);
             this.questDisplayLabel.Name = "questDisplayLabel";
             this.questDisplayLabel.Size = new System.Drawing.Size(313, 56);
             this.questDisplayLabel.TabIndex = 13;
+            this.questDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // answerButton1
             // 
             this.answerButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerButton1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerButton1.Location = new System.Drawing.Point(6, 27);
             this.answerButton1.Name = "answerButton1";
             this.answerButton1.Size = new System.Drawing.Size(133, 47);
             this.answerButton1.TabIndex = 15;
             this.answerButton1.TabStop = true;
+            this.answerButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.answerButton1.UseVisualStyleBackColor = true;
             // 
             // answerButton2
             // 
             this.answerButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerButton2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerButton2.Location = new System.Drawing.Point(171, 27);
             this.answerButton2.Name = "answerButton2";
             this.answerButton2.Size = new System.Drawing.Size(133, 47);
             this.answerButton2.TabIndex = 16;
             this.answerButton2.TabStop = true;
+            this.answerButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.answerButton2.UseVisualStyleBackColor = true;
             // 
             // answerButton3
             // 
             this.answerButton3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerButton3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerButton3.Location = new System.Drawing.Point(6, 89);
             this.answerButton3.Name = "answerButton3";
             this.answerButton3.Size = new System.Drawing.Size(133, 47);
             this.answerButton3.TabIndex = 17;
             this.answerButton3.TabStop = true;
+            this.answerButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.answerButton3.UseVisualStyleBackColor = true;
             // 
             // answerButton4
             // 
             this.answerButton4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerButton4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerButton4.Location = new System.Drawing.Point(171, 89);
             this.answerButton4.Name = "answerButton4";
             this.answerButton4.Size = new System.Drawing.Size(133, 47);
             this.answerButton4.TabIndex = 18;
             this.answerButton4.TabStop = true;
+            this.answerButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.answerButton4.UseVisualStyleBackColor = true;
-            // 
-            // backButton
-            // 
-            this.backButton.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Image = global::TriviaGame.Properties.Resources.quitB;
-            this.backButton.Location = new System.Drawing.Point(129, 328);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(88, 49);
-            this.backButton.TabIndex = 19;
-            this.backButton.UseVisualStyleBackColor = true;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // nextButton
-            // 
-            this.nextButton.Location = new System.Drawing.Point(251, 343);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(75, 23);
-            this.nextButton.TabIndex = 20;
-            this.nextButton.Text = "Next";
-            this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // answersGroupBox
             // 
@@ -132,14 +121,35 @@
             this.answersGroupBox.TabStop = false;
             this.answersGroupBox.Text = "Select One";
             // 
+            // quitbutton
+            // 
+            this.quitbutton.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quitbutton.Image = global::TriviaGame.Properties.Resources.quitB;
+            this.quitbutton.Location = new System.Drawing.Point(75, 328);
+            this.quitbutton.Name = "quitbutton";
+            this.quitbutton.Size = new System.Drawing.Size(88, 49);
+            this.quitbutton.TabIndex = 22;
+            this.quitbutton.UseVisualStyleBackColor = true;
+            this.quitbutton.Click += new System.EventHandler(this.quitbutton_Click);
+            // 
+            // nextButton
+            // 
+            this.nextButton.Image = global::TriviaGame.Properties.Resources.nextB;
+            this.nextButton.Location = new System.Drawing.Point(169, 328);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(88, 49);
+            this.nextButton.TabIndex = 20;
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
             // PlayNow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 436);
+            this.Controls.Add(this.quitbutton);
             this.Controls.Add(this.answersGroupBox);
             this.Controls.Add(this.nextButton);
-            this.Controls.Add(this.backButton);
             this.Controls.Add(this.questDisplayLabel);
             this.Controls.Add(this.label3);
             this.Name = "PlayNow";
@@ -159,8 +169,8 @@
         private System.Windows.Forms.RadioButton answerButton2;
         private System.Windows.Forms.RadioButton answerButton3;
         private System.Windows.Forms.RadioButton answerButton4;
-        private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.GroupBox answersGroupBox;
+        private System.Windows.Forms.Button quitbutton;
     }
 }

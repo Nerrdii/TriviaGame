@@ -37,6 +37,8 @@
             this.playNowButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.categoryGroupBox = new System.Windows.Forms.GroupBox();
+            this.namesTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.categoryGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +121,7 @@
             // 
             this.playNowButton.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playNowButton.Image = global::TriviaGame.Properties.Resources.playgameB;
-            this.playNowButton.Location = new System.Drawing.Point(185, 336);
+            this.playNowButton.Location = new System.Drawing.Point(185, 318);
             this.playNowButton.Name = "playNowButton";
             this.playNowButton.Size = new System.Drawing.Size(88, 49);
             this.playNowButton.TabIndex = 12;
@@ -130,7 +132,7 @@
             // 
             this.backButton.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Image = global::TriviaGame.Properties.Resources.backB;
-            this.backButton.Location = new System.Drawing.Point(70, 336);
+            this.backButton.Location = new System.Drawing.Point(70, 318);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(88, 49);
             this.backButton.TabIndex = 8;
@@ -152,11 +154,30 @@
             this.categoryGroupBox.TabStop = false;
             this.categoryGroupBox.Text = "Choose a Category:";
             // 
+            // namesTextBox
+            // 
+            this.namesTextBox.Location = new System.Drawing.Point(163, 254);
+            this.namesTextBox.Name = "namesTextBox";
+            this.namesTextBox.Size = new System.Drawing.Size(163, 20);
+            this.namesTextBox.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 256);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 16);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Enter Name for High Scores:";
+            // 
             // PlayGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 436);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.namesTextBox);
             this.Controls.Add(this.categoryGroupBox);
             this.Controls.Add(this.playNowButton);
             this.Controls.Add(this.label3);
@@ -181,5 +202,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button playNowButton;
         private System.Windows.Forms.GroupBox categoryGroupBox;
+        private System.Windows.Forms.TextBox namesTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }

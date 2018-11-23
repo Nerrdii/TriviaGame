@@ -31,11 +31,6 @@ namespace TriviaGame
             Category = category;
         }
 
-        private void backButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void PlayNow_Load(object sender, EventArgs e)
         {
             LoadQuestions();
@@ -131,6 +126,11 @@ namespace TriviaGame
         private Answer GetCorrectAnswer()
         {
             return ((MultipleChoiceQuestion)questionsBindingSource.Current).Answers.First(r => r.IsCorrect);
+        }
+
+        private void quitbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

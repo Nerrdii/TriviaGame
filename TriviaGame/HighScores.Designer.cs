@@ -30,7 +30,6 @@
         {
             this.hscoreTBackButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.scoreDataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.scoreDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -39,7 +38,7 @@
             // 
             this.hscoreTBackButton.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hscoreTBackButton.Image = global::TriviaGame.Properties.Resources.backB;
-            this.hscoreTBackButton.Location = new System.Drawing.Point(81, 347);
+            this.hscoreTBackButton.Location = new System.Drawing.Point(131, 346);
             this.hscoreTBackButton.Name = "hscoreTBackButton";
             this.hscoreTBackButton.Size = new System.Drawing.Size(87, 44);
             this.hscoreTBackButton.TabIndex = 4;
@@ -56,16 +55,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "High Scores";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::TriviaGame.Properties.Resources.highscoresB;
-            this.button1.Location = new System.Drawing.Point(185, 347);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 44);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // scoreDataGridView
             // 
             this.scoreDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
@@ -81,7 +70,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 436);
             this.Controls.Add(this.scoreDataGridView);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.hscoreTBackButton);
             this.Name = "HighScores";
@@ -97,7 +85,6 @@
 
         private System.Windows.Forms.Button hscoreTBackButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView scoreDataGridView;
     }
 }
