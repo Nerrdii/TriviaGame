@@ -31,15 +31,12 @@ namespace TriviaGame
             backMain.Show();
         }
 
-        private void PlayGame_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void playNowButton_Click(object sender, EventArgs e)
         {
+            // Get chosen category
             var category = categoryGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 
+            // Do validation to make sure they chose category and entered name
             if (category == null)
             {
                 MessageBox.Show("Category must be chosen", "Error", MessageBoxButtons.OK);

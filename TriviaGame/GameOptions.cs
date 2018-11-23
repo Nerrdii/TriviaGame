@@ -19,20 +19,13 @@ namespace TriviaGame
             this.Location = new Point(0, 0);
         }
 
-        private void optBackButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Main backMain = new Main();
-            backMain.MdiParent = this.MdiParent;
-            backMain.Show();
-            //this.Close();
-        }
-
         private void submitButton_Click(object sender, EventArgs e)
         {
+            // Get the checked radio buttons for category and difficulty
             category = categoryGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
             difficulty = difficultyGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 
+            // Do validation to make sure everything is filled out
             if (category == null)
             {
                 MessageBox.Show("Category must be chosen", "Error", MessageBoxButtons.OK);
@@ -57,6 +50,7 @@ namespace TriviaGame
                 return;
             }
 
+            // Create question from input boxed and add answers to it
             Question question = new Question
             {
                 Text = questionTextBox.Text,
@@ -71,6 +65,7 @@ namespace TriviaGame
 
             DBIntermediary triviaDbIntermediary = new DBIntermediary();
 
+            // Add question to database
             triviaDbIntermediary.AddQuestionWithAnswers(question);
 
             MessageBox.Show("Question successfully added!", "Success", MessageBoxButtons.OK);
@@ -86,6 +81,7 @@ namespace TriviaGame
             ResetForm();
         }
 
+        // Clear out all the input boxes and radio buttons
         private void ResetForm()
         {
             questionTextBox.Clear();
@@ -103,6 +99,18 @@ namespace TriviaGame
             {
                 difficulty.Checked = false;
             }
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+
+            Main mainForm = new Main
+            {
+                MdiParent = MdiParent
+            };
+
+            mainForm.Show();
         }
     }
 }

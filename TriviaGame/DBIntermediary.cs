@@ -64,13 +64,16 @@ namespace TriviaGame
         {
             try
             {
+                // Get question ID so we can link it to answers
                 int questionId = InsertIntoQuestionTable(question.Text, question.Category, question.Difficulty);
 
+                // For each answer, insert into database
                 question.Answers.ForEach(a =>
                 {
                     int id = InsertIntoOptionTable(a.Text);
                     InsertIntoQuestionOptionTable(questionId, id);
 
+                    // If the answer is the correct one, update the question table to link it
                     if (a.IsCorrect)
                     {
                         UpdateQuestionTableWithCorrectAnswer(id, questionId);
