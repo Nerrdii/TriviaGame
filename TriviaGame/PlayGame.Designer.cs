@@ -47,9 +47,10 @@
             this.sportsButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.sportsButton.AutoSize = true;
             this.sportsButton.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sportsButton.Location = new System.Drawing.Point(6, 28);
+            this.sportsButton.Location = new System.Drawing.Point(16, 67);
+            this.sportsButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.sportsButton.Name = "sportsButton";
-            this.sportsButton.Size = new System.Drawing.Size(69, 31);
+            this.sportsButton.Size = new System.Drawing.Size(157, 64);
             this.sportsButton.TabIndex = 3;
             this.sportsButton.TabStop = true;
             this.sportsButton.Text = "Sports";
@@ -60,9 +61,10 @@
             this.moviesButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.moviesButton.AutoSize = true;
             this.moviesButton.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moviesButton.Location = new System.Drawing.Point(103, 28);
+            this.moviesButton.Location = new System.Drawing.Point(275, 67);
+            this.moviesButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.moviesButton.Name = "moviesButton";
-            this.moviesButton.Size = new System.Drawing.Size(77, 31);
+            this.moviesButton.Size = new System.Drawing.Size(176, 64);
             this.moviesButton.TabIndex = 4;
             this.moviesButton.TabStop = true;
             this.moviesButton.Text = "Movies";
@@ -73,9 +75,10 @@
             this.tvShowsButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.tvShowsButton.AutoSize = true;
             this.tvShowsButton.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tvShowsButton.Location = new System.Drawing.Point(212, 28);
+            this.tvShowsButton.Location = new System.Drawing.Point(565, 67);
+            this.tvShowsButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tvShowsButton.Name = "tvShowsButton";
-            this.tvShowsButton.Size = new System.Drawing.Size(96, 31);
+            this.tvShowsButton.Size = new System.Drawing.Size(223, 64);
             this.tvShowsButton.TabIndex = 5;
             this.tvShowsButton.TabStop = true;
             this.tvShowsButton.Text = "TV Shows";
@@ -86,9 +89,10 @@
             this.musicButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.musicButton.AutoSize = true;
             this.musicButton.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.musicButton.Location = new System.Drawing.Point(58, 91);
+            this.musicButton.Location = new System.Drawing.Point(155, 217);
+            this.musicButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.musicButton.Name = "musicButton";
-            this.musicButton.Size = new System.Drawing.Size(69, 31);
+            this.musicButton.Size = new System.Drawing.Size(157, 64);
             this.musicButton.TabIndex = 6;
             this.musicButton.TabStop = true;
             this.musicButton.Text = "Music";
@@ -99,9 +103,10 @@
             this.gamesButton.Appearance = System.Windows.Forms.Appearance.Button;
             this.gamesButton.AutoSize = true;
             this.gamesButton.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gamesButton.Location = new System.Drawing.Point(160, 91);
+            this.gamesButton.Location = new System.Drawing.Point(427, 217);
+            this.gamesButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.gamesButton.Name = "gamesButton";
-            this.gamesButton.Size = new System.Drawing.Size(76, 31);
+            this.gamesButton.Size = new System.Drawing.Size(172, 64);
             this.gamesButton.TabIndex = 7;
             this.gamesButton.TabStop = true;
             this.gamesButton.Text = "Games";
@@ -111,9 +116,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 8);
+            this.label3.Location = new System.Drawing.Point(213, 19);
+            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 36);
+            this.label3.Size = new System.Drawing.Size(452, 91);
             this.label3.TabIndex = 11;
             this.label3.Text = "Trivia Game";
             // 
@@ -121,9 +127,10 @@
             // 
             this.playNowButton.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playNowButton.Image = global::TriviaGame.Properties.Resources.playgameB;
-            this.playNowButton.Location = new System.Drawing.Point(185, 318);
+            this.playNowButton.Location = new System.Drawing.Point(493, 758);
+            this.playNowButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.playNowButton.Name = "playNowButton";
-            this.playNowButton.Size = new System.Drawing.Size(88, 49);
+            this.playNowButton.Size = new System.Drawing.Size(235, 117);
             this.playNowButton.TabIndex = 12;
             this.playNowButton.UseVisualStyleBackColor = true;
             this.playNowButton.Click += new System.EventHandler(this.playNowButton_Click);
@@ -132,9 +139,10 @@
             // 
             this.backButton.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Image = global::TriviaGame.Properties.Resources.backB;
-            this.backButton.Location = new System.Drawing.Point(70, 318);
+            this.backButton.Location = new System.Drawing.Point(187, 758);
+            this.backButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(88, 49);
+            this.backButton.Size = new System.Drawing.Size(235, 117);
             this.backButton.TabIndex = 8;
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
@@ -147,44 +155,48 @@
             this.categoryGroupBox.Controls.Add(this.musicButton);
             this.categoryGroupBox.Controls.Add(this.gamesButton);
             this.categoryGroupBox.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryGroupBox.Location = new System.Drawing.Point(12, 72);
+            this.categoryGroupBox.Location = new System.Drawing.Point(32, 172);
+            this.categoryGroupBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.categoryGroupBox.Name = "categoryGroupBox";
-            this.categoryGroupBox.Size = new System.Drawing.Size(314, 146);
+            this.categoryGroupBox.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.categoryGroupBox.Size = new System.Drawing.Size(837, 348);
             this.categoryGroupBox.TabIndex = 13;
             this.categoryGroupBox.TabStop = false;
             this.categoryGroupBox.Text = "Choose a Category:";
             // 
             // namesTextBox
             // 
-            this.namesTextBox.Location = new System.Drawing.Point(163, 254);
+            this.namesTextBox.Location = new System.Drawing.Point(435, 606);
+            this.namesTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.namesTextBox.Name = "namesTextBox";
-            this.namesTextBox.Size = new System.Drawing.Size(163, 20);
+            this.namesTextBox.Size = new System.Drawing.Size(428, 38);
             this.namesTextBox.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 256);
+            this.label1.Location = new System.Drawing.Point(8, 610);
+            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 16);
+            this.label1.Size = new System.Drawing.Size(392, 40);
             this.label1.TabIndex = 15;
             this.label1.Text = "Enter Name for High Scores:";
             // 
             // PlayGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 436);
+            this.ClientSize = new System.Drawing.Size(901, 1040);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.namesTextBox);
             this.Controls.Add(this.categoryGroupBox);
             this.Controls.Add(this.playNowButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.backButton);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "PlayGame";
             this.Text = "Play Game";
-            this.Load += new System.EventHandler(this.PlayGame_Load);
             this.categoryGroupBox.ResumeLayout(false);
             this.categoryGroupBox.PerformLayout();
             this.ResumeLayout(false);

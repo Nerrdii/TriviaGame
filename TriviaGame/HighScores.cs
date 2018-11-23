@@ -19,19 +19,22 @@ namespace TriviaGame
             this.Location = new Point(0, 0);
         }
 
-        private void howTBackButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Main backMain = new Main();
-            backMain.MdiParent = this.MdiParent;
-            backMain.Show();
-            //this.Close();
-        }
-
         private void HighScores_Load(object sender, EventArgs e)
         {
-            TriviaDbIntermediary inst = new TriviaDbIntermediary();
-            scoreDataGridView.DataSource = inst.Leaderboard();
+            DBIntermediary dbIntermediary = new DBIntermediary();
+            scoreDataGridView.DataSource = dbIntermediary.Leaderboard();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+
+            Main mainForm = new Main
+            {
+                MdiParent = MdiParent
+            };
+
+            mainForm.Show();
         }
     }
 }
