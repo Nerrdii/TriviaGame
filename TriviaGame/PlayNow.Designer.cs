@@ -54,9 +54,9 @@
             // 
             this.questDisplayLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.questDisplayLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questDisplayLabel.Location = new System.Drawing.Point(13, 68);
+            this.questDisplayLabel.Location = new System.Drawing.Point(13, 44);
             this.questDisplayLabel.Name = "questDisplayLabel";
-            this.questDisplayLabel.Size = new System.Drawing.Size(313, 56);
+            this.questDisplayLabel.Size = new System.Drawing.Size(313, 101);
             this.questDisplayLabel.TabIndex = 13;
             this.questDisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -66,7 +66,7 @@
             this.answerButton1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerButton1.Location = new System.Drawing.Point(6, 27);
             this.answerButton1.Name = "answerButton1";
-            this.answerButton1.Size = new System.Drawing.Size(133, 47);
+            this.answerButton1.Size = new System.Drawing.Size(151, 47);
             this.answerButton1.TabIndex = 15;
             this.answerButton1.TabStop = true;
             this.answerButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,9 +76,9 @@
             // 
             this.answerButton2.Appearance = System.Windows.Forms.Appearance.Button;
             this.answerButton2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerButton2.Location = new System.Drawing.Point(171, 27);
+            this.answerButton2.Location = new System.Drawing.Point(163, 27);
             this.answerButton2.Name = "answerButton2";
-            this.answerButton2.Size = new System.Drawing.Size(133, 47);
+            this.answerButton2.Size = new System.Drawing.Size(145, 47);
             this.answerButton2.TabIndex = 16;
             this.answerButton2.TabStop = true;
             this.answerButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,7 +90,7 @@
             this.answerButton3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerButton3.Location = new System.Drawing.Point(6, 89);
             this.answerButton3.Name = "answerButton3";
-            this.answerButton3.Size = new System.Drawing.Size(133, 47);
+            this.answerButton3.Size = new System.Drawing.Size(151, 47);
             this.answerButton3.TabIndex = 17;
             this.answerButton3.TabStop = true;
             this.answerButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,9 +100,9 @@
             // 
             this.answerButton4.Appearance = System.Windows.Forms.Appearance.Button;
             this.answerButton4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerButton4.Location = new System.Drawing.Point(171, 89);
+            this.answerButton4.Location = new System.Drawing.Point(163, 89);
             this.answerButton4.Name = "answerButton4";
-            this.answerButton4.Size = new System.Drawing.Size(133, 47);
+            this.answerButton4.Size = new System.Drawing.Size(145, 47);
             this.answerButton4.TabIndex = 18;
             this.answerButton4.TabStop = true;
             this.answerButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
